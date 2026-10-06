@@ -2,9 +2,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>MZ</title>
 </head>
-<body>
-    <h1>Hi, I'm trying to become a full-stack developer. I hope I succeed.</h1>
+<body class="landing-body">
+
+    <nav class="navbar">
+        <h1>Max Zhang</h1>
+        <button class="hamburger" aria-label="Menu Toggle" aria-expanded="false" aria-controls="nav-links">
+            Menu
+        </button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="">About</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Fun</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>    
+
+    <main>
+        <section class="about">
+            <div class="about-div">
+                <div class="about-text">
+                    <h2>About me:</h2>
+                    <p>
+                        <strong>
+                        I'm a software developer that builds tools to make 
+                        complex data usable and fast. 
+                        </strong>
+                    </p>
+
+                    <p>
+                        I am a highly mission-driven person with <strong>2 years</strong> of
+                        professional software engineering experience working
+                        with the <strong>Department of Defense</strong>.
+                    </p>
+
+                    <p>
+                        In my spare time, I work on making software to better
+                        represent data in other areas like geology, space, and gaming.
+                    </p>
+                </div>
+                <img class="prof-img" src="img/inu-sakuya.jpg">
+            </div>
+        </section>
+
+        <section class="links">
+            <div class="links-div">
+                <img class="chibi-img" src="img/chibi_reimu.png" alt="Chibi Reimu">
+                <div class="links-text">
+                    <h2>Links:</h2>
+                    <div class="link-buttons">
+                        <button class="link-button" email="zmax9999@proton.me" aria-label="Email">
+                            <img src="img/protonmail.svg" alt="">
+                        </button>
+                        <a class="link-button" href="https://www.linkedin.com/in/zhangm21/" aria-label="LinkedIn">
+                            <img src="img/linkedin.png" alt="">
+                        </a>
+                        <a class="link-button" href="https://github.com/alittlerocket" aria-label="GitHub">
+                            <img src="img/github.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <p class="copy-text" aria-live="polite">Copy successful.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Max Zhang</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
 </body>
 </html>

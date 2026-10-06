@@ -1,0 +1,250 @@
+body
+{
+    background-color: black;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    margin: 0 0 0 0;
+}
+
+section
+{
+    padding-block: 5rem;
+}
+
+/* NAVBAR */
+
+.navbar
+{
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(70, 70, 70);
+    border-bottom: 2px solid #6c6c6c;
+}
+
+.navbar h1
+{
+    margin-left: 3vh;
+}
+
+.nav-links
+{
+    display: flex;
+    list-style-type: none;
+    align-self: stretch;
+    margin: 0 2rem 0 0;
+}
+
+.navbar li
+{
+    display: flex;
+}
+
+.navbar a
+{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.navbar a:hover
+{
+    background-color: gray;
+}
+
+.hamburger
+{
+    display: none;
+}
+
+/* MAIN */
+.about
+{
+    --skew-angle: -3deg;
+    --background: linear-gradient(
+            45deg,
+            #5c5c5c,
+            #3c3c3c,
+            #0c0c0c
+        );
+
+
+    position: relative;
+    isolation: isolate;
+}
+
+.about::after
+{
+    content: '';
+    background-image: var(--background);
+        
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    transform: skewY(var(--skew-angle));
+}
+
+.about-div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    margin: 0 auto 0 auto;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    gap: 5vh;
+}
+
+.about-text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 30rem;
+}
+
+.prof-img
+{
+    max-width: 20rem;
+    align-self: center;
+    border-radius: 10px;
+    transform: scaleX(-1);
+}
+
+/* LINKS */
+
+.links-div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-inline: 2rem;
+    gap: 25vh;
+}
+
+.link-buttons
+{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.link-button
+{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem;
+    background-color: rgb(70, 70, 70);
+    border: 2px solid #6c6c6c;
+    border-radius: 10px;
+}
+
+.link-button:hover
+{
+    background-color: rgb(40, 40, 40);
+}
+
+.links-text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chibi-img
+{
+    max-width: 17rem;
+    transform: scaleX(-1);
+}
+
+.link-button svg,
+.link-button img
+{
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.copy-text
+{
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.copy-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.copy-text.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* phones */
+@media (max-width: 600px)
+{
+    .navbar
+    {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        flex-basis: 100%;
+        margin: 0 0;
+        padding: 0;
+        gap: 0;
+    }
+    .nav-links a 
+    {
+
+        width: 100%;
+    }
+    .nav-links.open {display: flex}
+    .hamburger {
+        display: block;
+        font-family: inherit;
+        color: white;
+        background-color: transparent;
+        border: none;
+        padding: 30px;
+    }
+    .hamburger:hover
+    {
+        background-color: gray;
+    }
+
+    .links-div
+    {
+        gap: 5vh;
+    }
+}
+
+
+/* FOOTER */
+
+.footer
+{
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #6c6c6c, transparent) 1;
+    margin-inline: auto;
+    text-align: center;
+    padding-block: 1.5rem;
+    font-size: 0.8rem;
+    color: #9c9c9c;
+}
+
+.footer p
+{
+    margin: 0;
+}
