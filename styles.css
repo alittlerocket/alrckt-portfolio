@@ -4,11 +4,13 @@ body
     color: white;
     font-family:'Courier New', Courier, monospace;
     margin: 0 0 0 0;
+    font-size: clamp(0.9rem, 0.7rem + 1vw, 1.1rem);
 }
 
 section
 {
     padding-block: 5rem;
+    padding-inline: max(2rem, calc((100% - 62.5rem) / 2));
 }
 
 /* NAVBAR */
@@ -61,8 +63,7 @@ section
     display: none;
 }
 
-/* MAIN */
-.about
+.diagonal
 {
     --skew-angle: -3deg;
     --background: linear-gradient(
@@ -72,35 +73,30 @@ section
             #0c0c0c
         );
 
-
     position: relative;
     isolation: isolate;
 }
 
-.about::after
+.diagonal::after
 {
     content: '';
     background-image: var(--background);
-        
     position: absolute;
     z-index: -1;
     inset: 0;
     transform: skewY(var(--skew-angle));
 }
 
-.about-div
+.split-div
 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap-reverse;
-    margin: 0 auto 0 auto;
-    margin-inline: auto;
-    padding-inline: 2rem;
     gap: 5vh;
 }
 
-.about-text
+.split-text
 {
     display: flex;
     flex-direction: column;
@@ -110,11 +106,12 @@ section
 
 .prof-img
 {
-    max-width: 20rem;
+    max-width: 40%;
     align-self: center;
     border-radius: 10px;
-    transform: scaleX(-1);
+    border: 1px solid white;
 }
+
 
 /* LINKS */
 
@@ -125,8 +122,7 @@ section
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding-inline: 2rem;
-    gap: 25vh;
+    gap: 20vh;
 }
 
 .link-buttons
@@ -161,8 +157,7 @@ section
 
 .chibi-img
 {
-    max-width: 17rem;
-    transform: scaleX(-1);
+    max-width: 35%;
 }
 
 .link-button svg,
@@ -187,6 +182,149 @@ section
 .copy-text.fade-out {
   opacity: 0;
   transform: translateY(-10px);
+}
+
+/* PROJECTS PAGE */
+
+.projects-page main > section
+{
+    padding-block: 6rem;
+}
+
+.projects-page main > section + section,
+.project-list > * + *
+{
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #6c6c6c, transparent) 1;
+}
+
+.projects-page #education + section
+{
+    border: none;
+}
+
+.projects-page main a
+{
+    color: #8ec5ff;
+}
+
+.section-div
+{
+    line-height: 1.6;
+}
+
+.split-text
+{
+    line-height: 1.6;
+}
+
+.section-div h2,
+.split-text h2
+{
+    margin-top: 0;
+}
+
+.meta
+{
+    color: #9c9c9c;
+    margin-top: -0.5rem;
+}
+
+.project-list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.project-list > * + *
+{
+    padding-top: 2.5rem;
+}
+
+.project-list h3
+{
+    margin-bottom: 0.5rem;
+}
+
+.card-row
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card
+{
+    flex: 1 1 15rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(70, 70, 70);
+    border: 2px solid #6c6c6c;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+}
+
+.card a
+{
+    margin-top: auto;
+}
+
+.card-header
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-header img
+{
+    width: 25%;
+    flex-shrink: 0;
+}
+
+.with-graphic
+{
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+
+.with-graphic.reverse
+{
+    flex-direction: row-reverse;
+}
+
+.with-graphic figure
+{
+    width: 50%;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.with-graphic.stacked
+{
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.with-graphic.stacked figure
+{
+    margin-top: 1.5rem;
+    width: 85%;
+}
+
+.with-graphic img
+{
+    width: 100%;
+}
+
+figcaption
+{
+    margin-top: 0.5rem;
+    font-size: 12pt;
+    color: #9c9c9c;
+    text-align: center;
 }
 
 /* phones */
@@ -228,8 +366,46 @@ section
     {
         gap: 5vh;
     }
+
+    .with-graphic,
+    .with-graphic.reverse
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .prof-img,
+    .chibi-img
+    {
+        max-width: 100%;
+    }
+
+    .with-graphic figure,
+    .with-graphic.stacked figure,
+    .card-header img
+    {
+        width: 100%;
+    }
+
+    .card-header
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
+.rpi-container
+{
+    display: flex;
+    max-width: 100px;
+}
+
+.rpi-logo
+{
+    max-width: 100%;
+    height: auto;
+}
 
 /* FOOTER */
 
@@ -247,4 +423,33 @@ section
 .footer p
 {
     margin: 0;
+}
+
+
+/* animations */
+.animate-in {
+    --x: 0px;
+    --y: 0px;
+    --flip: 1;
+
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scaleX(var(--flip));
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-in.visible {
+    opacity: 1;
+    transform: translate(0, 0) scaleX(var(--flip));
+}
+
+.from-left {
+    --x: -20px;
+}
+
+.from-right {
+    --x: 20px;
+}
+
+.flipped {
+    --flip: -1;
 }

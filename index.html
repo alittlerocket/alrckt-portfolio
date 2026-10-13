@@ -13,17 +13,16 @@
             Menu
         </button>
         <ul id="nav-links" class="nav-links">
-            <li><a href="">About</a></li>
-            <li><a href="">Projects</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/projects.html">Projects</a></li>
             <li><a href="">Fun</a></li>
-            <li><a href="">Contact</a></li>
         </ul>
     </nav>    
 
     <main>
-        <section class="about">
-            <div class="about-div">
-                <div class="about-text">
+        <section class="diagonal">
+            <div class="split-div">
+                <div class="split-text animate-in from-left">
                     <h2>About me:</h2>
                     <p>
                         <strong>
@@ -39,21 +38,21 @@
                     </p>
 
                     <p>
-                        In my spare time, I work on making software to better
+                        In my spare time, I work on making web applications to better
                         represent data in other areas like geology, space, and gaming.
                     </p>
                 </div>
-                <img class="prof-img" src="img/inu-sakuya.jpg">
+                <img class="prof-img animate-in from-right flipped" src="img/inu-sakuya.jpg">
             </div>
         </section>
 
         <section class="links">
             <div class="links-div">
-                <img class="chibi-img" src="img/chibi_reimu.png" alt="Chibi Reimu">
-                <div class="links-text">
+                <img class="chibi-img animate-in from-left flipped" src="img/chibi_reimu.png" alt="Chibi Reimu">
+                <div class="links-text animate-in from-right">
                     <h2>Links:</h2>
                     <div class="link-buttons">
-                        <button class="link-button" email="zmax9999@proton.me" aria-label="Email">
+                        <button class="link-button" data-email="zmax9999@proton.me" aria-label="Email">
                             <img src="img/protonmail.svg" alt="">
                         </button>
                         <a class="link-button" href="https://www.linkedin.com/in/zhangm21/" aria-label="LinkedIn">
@@ -76,6 +75,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="main.js"></script>
+    <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

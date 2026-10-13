@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MZ | Projects</title>
+</head>
+<body class="projects-page">
+
+    <nav class="navbar">
+        <h1>Max Zhang</h1>
+        <button class="hamburger" aria-label="Menu Toggle" aria-expanded="false" aria-controls="nav-links">
+            Menu
+        </button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="/">About</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="">Fun</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="diagonal" id="education">
+            <div class="split-div">
+                <div class="split-text animate-in from-left">
+                    <h2>Education:</h2>
+                    <p>Rensselaer Polytechnic Institute Alumni</p>
+                    <p>BS in Computer Science</p>
+                    <a href="https://www.rpi.edu/" class="rpi-container" aria-label="Rensselaer Polytechnic Institute">
+                        <img src="img/rpi.png" class="rpi-logo">
+                    </a>
+                </div>
+                <img class="prof-img animate-in from-right" src="img/koishi_peek.jpg" alt="Koishi peeking from behind the edge of the frame">
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-div">
+                <h2 class="animate-in from-right">Experience: Quaternion Consulting Inc.</h2>
+                <p class="meta animate-in from-right">Software Engineer, Modeling and Simulation &middot; Feb 2025 &ndash; present</p>
+                <div class="project-list">
+                    <div class="with-graphic animate-in from-right">
+                        <figure>
+                            <img src="img/sat_cache.png">
+                            <figcaption>SAR Imagery of Washington DC. Credit: Umbra</figcaption>
+                        </figure>
+                        <div>
+                            <h3>Satellite Data Caching</h3>
+                            <p>
+                                Satellite detection data is critical to our simulations, but
+                                computing it slows them down.
+                            </p>
+                            <p>
+                                I built a system that caches this data locally in highly compressed
+                                tables, with constant-time access by geometry and hardware specification.
+                            </p>
+                            <p>
+                                It improved runtime by over 25% in high-throughput simulations and
+                                optimized existing caches by over 80%.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="with-graphic reverse animate-in from-right">
+                        <figure>
+                            <img src="img/etl.png" alt="">
+                            <figcaption>Credit: GeeksForGeeks</figcaption>
+                        </figure>
+                        <div>
+                            <h3>Detection Data Pipeline</h3>
+                            <p>
+                                Detection data from our simulation engine has to be streamed into a
+                                database for downstream services.
+                            </p>
+                            <p>
+                                I built an asynchronous ETL (Extract, Transform, Load) pipeline that pulls data
+                                from the engine's API, converts it into database-ready objects, and loads it with SQL queries.
+                                Instances run in parallel, and an LRU cache deduplicates inserts to reduce database load.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="with-graphic animate-in from-right">
+                        <figure>
+                            <img src="img/coverage.png" alt="">
+                            <figcaption>Credit: sarsat.noaa.gov</figcaption>
+                        </figure>
+                        <div>
+                            <h3>Analyzing Satellite Coverage</h3>
+                            <p>
+                                Our simulation engine rests on assumptions, and how large an area a
+                                satellite can cover is one of them.
+                            </p>
+                            <p>
+                                After studying the physics behind the sensors, I built a tool that lets engineers
+                                analyze and tweak satellite parameters to make better-informed decisions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="other-experience">
+            <div class="section-div">
+                <div class="with-graphic reverse animate-in from-left">
+                    <figure>
+                        <img src="img/flight.png" alt="">
+                        <figcaption>Credit: World Aviation Festival collaboration with TCG Digital</figcaption>
+                    </figure>
+                    <div>
+                        <h2>Experience: TCG Digital</h2>
+                        <p class="meta">Backend Software Developer &middot; Jan &ndash; Apr 2024</p>
+                        <p>
+                            I worked on a system that processed flight metadata to find high-risk
+                            connections and automate remedies when delays threatened missed connections.
+                        </p>
+                        <p>
+                            Cost analysis was key: we weighed the cost of delaying a flight so customers
+                            could connect against cancelling it altogether.
+                        </p>
+                        <p>
+                            I also learned modern frameworks like Kafka for real-time data streaming and
+                            ElasticSearch for indexing high-volume airline text metadata.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-div">
+                <h2 class="animate-in from-left">Projects:</h2>
+                <div class="card-row">
+                    <article class="card animate-in from-left">
+                        <div class="card-header">
+                            <img src="img/puppetdex.svg" alt="">
+                            <h3>THPD-puppetdex</h3>
+                        </div>
+                        <p>
+                            A visual database of puppets for Touhou Puppet Dance Performance, with
+                            advanced filtering and damage calculations the wiki doesn't provide.
+                        </p>
+                        <p>Built with Tauri, TypeScript, and SQLite.</p>
+                        <a href="https://github.com/alittlerocket/THPD-PuppetDex">View on GitHub</a>
+                    </article>
+                    <article class="card animate-in from-right">
+                        <div class="card-header">
+                            <img src="img/eqdata.svg" alt="">
+                            <h3>eq-data</h3>
+                        </div>
+                        <p>
+                            Predicts earthquakes over the next 30 years from historical USGS data.
+                        </p>
+                        <a href="https://github.com/alittlerocket/Eq-data">View on GitHub</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <div class="section-div">
+                <h2 class="animate-in from-left">Machine Unlearning Research:</h2>
+                <div class="with-graphic stacked animate-in from-left">
+                    <figure>
+                        <img class="unlearning-img" src="img/unlearning.png" alt="">
+                        <figcaption>
+                            Credit: A.K. Tarun et al. Noise 
+                            is optimized to maximize error on the target data, 
+                            'impairing' the model, then repaired thru retraining 
+                            on leftover data.
+                        </figcaption>
+                    </figure>
+                    <div>
+                        <p>
+                            Machine unlearning removes information from a trained model without
+                            retraining it from scratch.
+                        </p>
+                        <p>
+                            This matters for AI privacy, especially in Europe, where the GDPR gives people a
+                            <a href="https://gdpr-info.eu/art-17-gdpr/">Right to Erasure</a> of their personal data.
+                        </p>
+                        <p>
+                            I implemented ways to verify the results of unlearning algorithms, such as
+                            Fast Unlearning, which maximizes error on the data to forget and then recovers
+                            performance by training on other data.
+                        </p>
+                        <p>
+                            For more detail, see this
+                            <a href="https://drive.google.com/drive/folders/1mQTtZJ_xEGLqPZcQddTtLTUPrn1Mex3g?usp=drive_link">Google Drive folder</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teaching">
+            <div class="section-div">
+                <div class="with-graphic reverse animate-in from-right">
+                    <figure>
+                        <img src="img/teaching.svg" alt="">
+                        <figcaption>Credit: Me</figcaption>
+                    </figure>
+                    <div>
+                        <h2>Teaching &amp; mentoring:</h2>
+                        <p>
+                            I was a TA at RPI for several semesters, managing intermediate
+                            Computer Science classes.
+                        </p>
+                        <p>
+                            I helped students understand complicated concepts in discrete mathematics
+                            and challenged them to find innovative solutions to difficult software
+                            engineering tasks.
+                        </p>
+                        <p>
+                            <strong>Classes taught:</strong> Intro to CS, Foundations of Computer Science
+                            (2 semesters), Principles of Software
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Max Zhang</p>
+    </footer>
+
+    <script type="module" src="/src/projects.ts"></script>
+</body>
+</html>
