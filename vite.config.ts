@@ -4,6 +4,8 @@ export default {
             input: {
                 main: "index.html",
                 projects: "projects.html",
+                fun: "fun.html",
+                stratagemHero: "stratagem-hero.html",
             },
         },
     },

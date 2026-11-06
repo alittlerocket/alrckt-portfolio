@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MZ | Stratagem Hero</title>
+</head>
+<body class="projects-page">
+    <nav class="navbar">
+        <h1>Max Zhang</h1>
+        <button class="hamburger" aria-label="Menu Toggle" aria-expanded="false" aria-controls="nav-links">
+            Menu
+        </button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="/">About</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/fun.html">Fun</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <div class="section-div">
+                <div id="stratagem-hero">
+                    <div class="sh-hud">
+                        <span>Round <strong id="sh-round">0</strong></span>
+                        <span>Score <strong id="sh-score">0</strong></span>
+                    </div>
+
+                    <div id="sh-queue" class="sh-queue" aria-label="Upcoming stratagems"></div>
+                    <img id="sh-icon" class="sh-icon" alt="" hidden>
+                    <div id="sh-name" class="sh-name"></div>
+                    <div id="sh-arrows" class="sh-arrows"></div>
+
+                    <div class="sh-timer"><div id="sh-timer-bar"></div></div>
+                    <p id="sh-message" class="sh-message" aria-live="polite"></p>
+
+                    <button id="sh-start" class="sh-start">Start (Enter)</button>
+
+                    <div class="sh-pad" aria-label="On-screen controls">
+                        <button data-direction="up" aria-label="Up"><span class="sh-arrow up"></span></button>
+                        <button data-direction="left" aria-label="Left"><span class="sh-arrow left"></span></button>
+                        <button data-direction="down" aria-label="Down"><span class="sh-arrow down"></span></button>
+                        <button data-direction="right" aria-label="Right"><span class="sh-arrow right"></span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Max Zhang</p>
+    </footer>
+
+    <script type="module" src="/src/stratagemHeroPage.ts"></script>
+</body>
+</html>

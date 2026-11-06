@@ -395,6 +395,24 @@ figcaption
     }
 }
 
+.badges
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.badges li
+{
+    padding: 0.3rem 0.8rem;
+    background-color: rgb(70, 70, 70);
+    border: 2px solid #6c6c6c;
+    border-radius: 10px;
+}
+
 .rpi-container
 {
     display: flex;
@@ -452,4 +470,179 @@ figcaption
 
 .flipped {
     --flip: -1;
+}
+/* FUN PAGE: STRATAGEM HERO */
+
+#stratagem-hero
+{
+    --sh-yellow: #ffe710;
+    max-width: 40rem;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.sh-hud
+{
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1.5rem 1rem;
+    color: var(--sh-yellow);
+}
+
+.sh-queue
+{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+}
+
+.sh-queue img
+{
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    opacity: 0.5;
+}
+
+.sh-icon
+{
+    display: block;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 1.5rem auto 0;
+}
+
+.sh-icon[hidden]
+{
+    display: none;
+}
+
+.sh-name
+{
+    margin-top: 0.75rem;
+    min-height: 1.5em;
+    font-size: 1.4em;
+    color: var(--sh-yellow);
+}
+
+.sh-arrows
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    min-height: 4rem;
+    margin-block: 1rem;
+}
+
+.sh-arrow
+{
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #6c6c6c;
+    background-color: currentColor;
+    -webkit-mask: url(/helldivers/arrow.svg) center / contain no-repeat;
+    mask: url(/helldivers/arrow.svg) center / contain no-repeat;
+}
+
+.sh-arrow.up {transform: rotate(-90deg)}
+.sh-arrow.down {transform: rotate(90deg)}
+.sh-arrow.left {transform: rotate(180deg)}
+
+.sh-arrow.done
+{
+    color: var(--sh-yellow);
+}
+
+.sh-arrow.wrong
+{
+    animation: sh-flash 0.4s;
+}
+
+@keyframes sh-flash
+{
+    from {color: #ff2a2a}
+}
+
+.sh-timer
+{
+    height: 0.8rem;
+    border: 2px solid #6c6c6c;
+}
+
+#sh-timer-bar
+{
+    height: 100%;
+    width: 100%;
+    background-color: var(--sh-yellow);
+}
+
+.sh-message
+{
+    min-height: 1.5em;
+}
+
+.sh-start[hidden]
+{
+    display: none;
+}
+
+.sh-pad
+{
+    display: grid;
+    grid-template-columns: repeat(4, 3.5rem);
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.sh-pad button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    color: white;
+    background-color: rgb(70, 70, 70);
+    border: 2px solid #6c6c6c;
+    cursor: pointer;
+}
+
+.sh-pad .sh-arrow
+{
+    width: 1.75rem;
+    height: 1.75rem;
+    color: white;
+}
+
+/* FUN PAGE */
+
+.projects-page main a.button-link,
+.sh-start
+{
+    display: inline-block;
+    padding: 0.7rem 1.6rem;
+    font: inherit;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    background-color: #ffe710;
+    border: 2px solid #ffe710;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.projects-page main a.button-link:hover,
+.sh-start:hover
+{
+    background-color: transparent;
+    color: #ffe710;
+}
+
+main > .diagonal:last-child
+{
+    margin-bottom: 4rem;
 }
