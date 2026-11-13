@@ -49,22 +49,23 @@
                 <div class="project-list">
                     <div class="with-graphic animate-in from-right">
                         <figure>
-                            <img src="img/sat_cache.png">
-                            <figcaption>SAR Imagery of Washington DC. Credit: Umbra</figcaption>
+                            <img src="img/cache.png">
+                            <figcaption>Basic Caching Visualization. Credit: systemdesignschool.io</figcaption>
                         </figure>
                         <div>
-                            <h3>Satellite Data Caching</h3>
+                            <h3>Data Caching</h3>
                             <p>
-                                Satellite detection data is critical to our simulations, but
-                                computing it slows them down.
+                                Aerospace data is central to large-scale distributed simulations, but
+                                computing it on demand is expensive.
                             </p>
                             <p>
-                                I built a system that caches this data locally in highly compressed
-                                tables, with constant-time access by geometry and hardware specification.
+                                I built a compact local caching system that serves this data with
+                                fast, constant-time lookups. It also ships with its own analysis suite 
+                                and visualizer, so engineers can inspect and validate the cached information.
                             </p>
                             <p>
-                                It improved runtime by over 25% in high-throughput simulations and
-                                optimized existing caches by over 80%.
+                                This improved runtime by over 25% in many of our high-demand
+                                tests and shrank the storage footprint of existing caches by over 80%.
                             </p>
                         </div>
                     </div>
@@ -76,7 +77,7 @@
                         <div>
                             <h3>Detection Data Pipeline</h3>
                             <p>
-                                Detection data from our simulation engine has to be streamed into a
+                                Data from our software has to be streamed into a
                                 database for downstream services.
                             </p>
                             <p>
@@ -92,14 +93,15 @@
                             <figcaption>Credit: sarsat.noaa.gov</figcaption>
                         </figure>
                         <div>
-                            <h3>Analyzing Satellite Coverage</h3>
+                            <h3>Analyzing Coverage from Hardware</h3>
                             <p>
-                                Our simulation engine rests on assumptions, and how large an area a
-                                satellite can cover is one of them.
+                                Geospatial coverage depends on hardware specifications and physics.
+                                Achieving realistic estimates requires a strong understanding of each field
+                                and the sim environment.
                             </p>
                             <p>
-                                After studying the physics behind the sensors, I built a tool that lets engineers
-                                analyze and tweak satellite parameters to make better-informed decisions.
+                                After studying the physics of the sensors, I built an interactive tool
+                                that lets engineers explore parameters and make better-informed decisions.
                             </p>
                         </div>
                     </div>
@@ -122,12 +124,13 @@
                             connections and automate remedies when delays threatened missed connections.
                         </p>
                         <p>
-                            Cost analysis was key: we weighed the cost of delaying a flight so customers
+                            We weighed the cost of delaying a flight so customers
                             could connect against cancelling it altogether.
                         </p>
                         <p>
-                            I also learned modern frameworks like Kafka for real-time data streaming and
-                            ElasticSearch for indexing high-volume airline text metadata.
+                            This gave me an opportunity to learn modern frameworks like Kafka for 
+                            real-time data streaming and ElasticSearch for indexing high-volume 
+                            airline text metadata.
                         </p>
                     </div>
                 </div>
@@ -157,6 +160,9 @@
                         </div>
                         <p>
                             Predicts earthquakes over the next 30 years from historical USGS data.
+                        </p>
+                        <p>
+                            Built with Python.
                         </p>
                         <a href="https://github.com/alittlerocket/Eq-data">View on GitHub</a>
                     </article>

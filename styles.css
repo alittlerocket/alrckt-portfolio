@@ -352,6 +352,7 @@ figcaption
     .hamburger {
         display: block;
         font-family: inherit;
+        font-size: 1.25rem;
         color: white;
         background-color: transparent;
         border: none;
